@@ -1,17 +1,34 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { Button, Appbar } from "react-native-paper";
+import HomeScreen from "./screens/HomeScreen.js";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <View style={styles.mainView}>
-        <Text style={styles.mainLogo}>ST'art</Text>
-      </View>
-      <View style={styles.buttonView}>
-        <Button style={styles.mainButton} title="BUTTON1" />
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen 
+          name="Home" 
+          component={HomeScreen} 
+          options={{ title: 'Overview' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+
+    //   {/* {<View style={styles.container}>
+    //   <StatusBar style="auto" />
+    //   <View style={styles.mainLogoView}>
+    //     <Text style={styles.mainLogo}>ST'art</Text>
+    //   </View>
+    //   <View style={styles.buttonView}>
+    //     <Button icon="camera" mode="contained" uppercase={false}>Press me</Button>
+    //   </View>
+    // </View>} */}
   );
 }
 
@@ -20,27 +37,27 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgb(255, 255, 255)",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
-  mainView: {
+  mainLogoView: {
     flex: 1,
     width: "100%",
     alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "rgb(255, 0, 255)",
   },
   buttonView: {
-    flex: 1,
+    flex: 2,
     backgroundColor: "rgb(106, 191, 70)",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    width: "100%",
   },
   mainLogo: {
-    flex: 1,
     color: "#000",
     fontSize: 50,
     fontWeight: "900",
   },
-  mainButton: {
-    flex: 1
-  },
 });
+
+export default App;

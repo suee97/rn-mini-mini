@@ -2,11 +2,11 @@
 
 ## react-native-expo
 
-### redux
-### push notification
-### navigation
-### top app bar
-### list view
-### api
+### 1. redux
+### 2. push notification
+### 3. navigation
+### 4. top app bar
+### 5. list view
+### 6. api
 
-### number counting
+## number counting
