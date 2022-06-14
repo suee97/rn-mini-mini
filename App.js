@@ -5,6 +5,7 @@ import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Button, Appbar } from "react-native-paper";
 import HomeScreen from "./screens/HomeScreen.js";
+import DetailScreen from "./screens/DetailScreen.js"
 
 const Stack = createNativeStackNavigator();
 
@@ -13,22 +14,18 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen 
-          name="Home" 
+          name="Home" // Route
           component={HomeScreen} 
+          options={{ title: 'Overview' }} // Screen-specific options
+        />
+        <Stack.Screen 
+          name="Detail"
+          component={DetailScreen}
           options={{ title: 'Overview' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
 
-    //   {/* {<View style={styles.container}>
-    //   <StatusBar style="auto" />
-    //   <View style={styles.mainLogoView}>
-    //     <Text style={styles.mainLogo}>ST'art</Text>
-    //   </View>
-    //   <View style={styles.buttonView}>
-    //     <Button icon="camera" mode="contained" uppercase={false}>Press me</Button>
-    //   </View>
-    // </View>} */}
   );
 }
 

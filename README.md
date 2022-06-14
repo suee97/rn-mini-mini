@@ -2,7 +2,7 @@
 
 ## react-native-expo
 
-### 1. redux
+### 1. recoil
 ### 2. push notification
 ### 3. navigation
 ### 4. top app bar
