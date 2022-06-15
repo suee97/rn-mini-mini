@@ -5,7 +5,7 @@ const DetailScreen = ({ navigation }) => {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Detail Screen</Text>
-        <Button 
+        <Button
             title="Go back" 
             onPress={() => navigation.goBack()} // 뒤로가기 구현
         />
