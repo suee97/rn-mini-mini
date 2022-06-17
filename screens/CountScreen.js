@@ -7,11 +7,7 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
-
-const numState = atom({
-  key: "MycurNum",
-  default: 0,
-});
+import { numState } from "../recoilState/numberState.js"
 
 function CountScreen() {
   const [curNum, setNum] = useRecoilState(numState);
