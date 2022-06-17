@@ -7,6 +7,7 @@ import { Button, Appbar } from "react-native-paper";
 import HomeScreen from "./screens/HomeScreen.js";
 import DetailScreen from "./screens/DetailScreen.js";
 import CountScreen from "./screens/CountScreen.js";
+import CalendarScreen from "./screens/CalendarSceen.js";
 import {
   RecoilRoot,
   atom,
@@ -26,8 +27,9 @@ function App() {
           screenOptions={{
             // 모든 screen에 적용되는 옵션, Overriding 가능
             headerStyle: {
-              backgroundColor: "#f4511e",
+              backgroundColor: "#000000",
             },
+            headerTintColor: "#ffffff"
           }}
         >
           <Stack.Screen
@@ -38,12 +40,17 @@ function App() {
           <Stack.Screen
             name="Detail"
             component={DetailScreen}
-            options={{ title: "Overview" }}
+            options={{ title: "Detail" }}
           />
           <Stack.Screen
             name="Count"
             component={CountScreen}
             options={{ title: "Count Number" }}
+          />
+          <Stack.Screen
+            name="Calendar"
+            component={CalendarScreen}
+            options={{ title: "Calendar" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
