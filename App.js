@@ -16,10 +16,15 @@ import {
   useRecoilState,
   useRecoilValue,
 } from "recoil";
+import registerNNPushToken from "native-notify";
+import { useState, useEffect } from 'react';
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+export default function App() {
+  
+  registerNNPushToken(3031, "H66wpIGGLD7MB5yhLy36Pu"); // 푸시알림 토큰
+
   return (
     <RecoilRoot>
       <NavigationContainer>
@@ -30,7 +35,7 @@ function App() {
             headerStyle: {
               backgroundColor: "#000000",
             },
-            headerTintColor: "#ffffff"
+            headerTintColor: "#ffffff",
           }}
         >
           <Stack.Screen
@@ -63,5 +68,3 @@ function App() {
     </RecoilRoot>
   );
 }
-
-export default App;
