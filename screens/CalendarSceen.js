@@ -16,7 +16,7 @@ const CalendarScreen = ({ navigation }) => {
           borderWidth: 1,
           borderColor: "gray",
           width: "100%",
-          backgroundColor: "red",
+          backgroundColor: "white",
         }}
         markingType="multi-period"
         markedDates={{
@@ -25,6 +25,13 @@ const CalendarScreen = ({ navigation }) => {
               { startingDay: true, endingDay: true, color: "#5f9ea0" },
               { startingDay: false, endingDay: true, color: "#ffa500" },
               { startingDay: true, endingDay: false, color: "#f0e68c" },
+            ],
+          },
+          "2022-06-18": {
+            periods: [
+              { startingDay: false, endingDay: false, color: "#5f9ea0" },
+              { startingDay: false, endingDay: false, color: "#ffa500" },
+              { startingDay: false, endingDay: false, color: "#f0e68c" },
             ],
           },
           "2022-06-20": {

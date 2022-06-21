@@ -1,12 +1,12 @@
-import React from 'react';
-import { Text, View } from 'react-native'
+import React from "react";
+import { Text, View } from "react-native";
 
-const simpleBox = () => {
-    return(
-        <View>
-            <Text>simpleBox page</Text>
-        </View>
-    )
-}
+const SimpleBox = () => {
+  return (
+    <View style={{backgroundColor: "red"}}>
+      <Text>simple box</Text>
+    </View>
+  );
+};
 
-export default simpleBox
+export default SimpleBox;

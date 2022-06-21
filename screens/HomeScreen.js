@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native'
+import SimpleBox from '../components/SimpleBox';
 
 const HomeScreen = ({ navigation }) => {
     return (
@@ -16,6 +17,10 @@ const HomeScreen = ({ navigation }) => {
         <Button
           title="Go to Calendar Screen(wix)"
           onPress={() => navigation.navigate('Calendar')}
+        />
+        <Button
+          title="Go to Push Screen"
+          onPress={() => navigation.navigate('Push')}
         />
       </View>
     );

@@ -7,6 +7,7 @@ import { Button, Appbar } from "react-native-paper";
 import HomeScreen from "./screens/HomeScreen.js";
 import DetailScreen from "./screens/DetailScreen.js";
 import CountScreen from "./screens/CountScreen.js";
+import PushScreen from "./screens/PushScreen.js";
 import CalendarScreen from "./screens/CalendarSceen.js";
 import {
   RecoilRoot,
@@ -51,6 +52,11 @@ function App() {
             name="Calendar"
             component={CalendarScreen}
             options={{ title: "Calendar" }}
+          />
+          <Stack.Screen
+            name="Push"
+            component={PushScreen}
+            options={{ title: "Push Notification" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
