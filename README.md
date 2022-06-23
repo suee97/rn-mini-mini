@@ -1,3 +1,6 @@
+***폐기처분했습니다***
+
+
 # RN MINI MINI PROJECT
 
 ## react-native-expo
